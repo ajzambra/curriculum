@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../Downloads/Compressed/MyResume"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "curriculum"
+	}
+}

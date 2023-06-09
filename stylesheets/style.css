@@ -1,45 +1,302 @@
-@import
-url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 h1 {
-font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    background-color: #3a3a7c;
+    padding: 10px;
+    border-radius: 20px;
 }
 
-h1 {
-    color: red;
-}
-
-h2,h3 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #fffffe;
 }
 
 * {
     font-family: Arial, sans-serif;
     color: #94a1b2;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.contenedor {
+    display: flex;
+    justify-content: justify;
+    align-items: justify;
+    width: 98%;
+    min-width: 590px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    height: 90%;
+}
+
+
+body {
+    height: 100vh;
+    background-color: #16161a;
 }
 
 a {
-    text-decoration: none; /* Elimina el subrayado */
-    font-size: 1.2rem; /* Aplica un tamaño de fuente de 1.2rem */
+    text-decoration: none;
+    /* Elimina el subrayado */
+    font-size: 1.2rem;
+    /* Aplica un tamaño de fuente de 1.2rem */
     color: #7f5af0;
-  }
+}
 
 #informacionPersonal {
-    background-color: #3a3a7c ;
+    background-color: #3a3a7c;
 }
 
-#imagen {
-    border: 1pt solid black;
-    padding: 1.1rem;
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+#inicio {
+    display: flex;
+    padding: 10px;
+}
+
+#titulo {
+    flex-basis: 70%;
+    padding: 100px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#inicio>#imagen {
+    flex-basis: 30%;
+}
+
+#inicio img {
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.redesSociales img {
+    width: 5%;
+    /* Ajusta el ancho según tus necesidades */
+    height: auto;
+    /* La altura se ajustará automáticamente para mantener la proporción */
+}
+
+.contenedor-menu {
+    position: fixed;
+  top: 50%;
+  left: 6%;
+  transform: translate(-50%);
+  width: 200px;
+  height: 100vh;
+  z-index: 10;
+}
+
+.contenedor-informacion {
+    flex-basis: 80%;
+    margin-left: 200px;
+    
+}
+
+.contenedor-menu a {
     display: block;
-    margin-left: auto;
-    margin-right: auto
+    padding: 8px 16px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: #fffffe;
+
+
 }
 
-/*h2 {
-    font-family: 'Times New Roman', serif;
+.contenedor-menu a:hover {
+    background-color: #3a3a7c;
 }
 
-h1 {
-    font-family: Georgia, serif;
-}*/
+.cardElement {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.portafolioElement {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+
+.portafolioElement span {
+    font-weight: bold;
+    color: #fffffe;
+}
+
+.portafolioElement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#elementoAcercaDe {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Estilos para barra de skills */
+.card {
+    width: 100%;
+    /*hacer que se separe para que se diferencie los bordes*/
+    padding: 10px;
+    /*separacion entre los bordes y el contenido*/
+    border-radius: 20px;
+    /*redondear los bordes*/
+    background-color: #1e1e26;
+    /*color de fondo*/
+    margin-bottom: 20px;
+    /*separacion entre las tarjetas*/
+
+    padding-top: 30px;
+
+}
+.tituloSeccion{
+    line-height: 2;
+    
+}
+
+.lenguajes :not(:last-child) {
+    margin-bottom: 1%;
+}
+
+.lenguajes {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.detail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.menu div {
+    position: relative;
+    width: 0;
+    height: 8px;
+    border-radius: 10px;
+    background-color: #3a3a7c;
+}
+
+.menu {
+    position: relative;
+    border: 1px solid #3a3a7c;
+    border-radius: 20px;
+}
+
+/*Animacion*/
+
+#java-menu {
+    animation: java-barra 2s forwards;
+}
+
+@keyframes java-barra {
+    100% {
+        width: 90%;
+    }
+}
+
+#python-menu {
+    animation: python-barra 2s forwards;
+}
+
+@keyframes python-barra {
+    100% {
+        width: 80%;
+    }
+}
+
+#mySQL-menu {
+    animation: mySQL-barra 2s forwards;
+}
+
+@keyframes mySQL-barra {
+    100% {
+        width: 90%;
+    }
+}
+
+
+/* Estilos para formulario */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 120px;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: #3a3a7c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+.form-group button:hover {
+    background-color: #3a3a7c;
+}
+
+.hidden {
+    display: none;
+}
+
+footer{
+    background-color: #3a3a7c;
+    color: #fffffe;
+    padding: 30px;
+    text-align: center;
+}
